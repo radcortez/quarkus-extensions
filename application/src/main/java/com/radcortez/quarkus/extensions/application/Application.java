@@ -3,19 +3,17 @@ package com.radcortez.quarkus.extensions.application;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
-import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.core.Response;
 
-import com.radcortez.quarkus.extensions.library.Library;
+import com.radcortez.quarkus.extensions.library.Saiyan;
 
-@Path("/hello")
+@Path("/")
 public class Application {
     @Inject
-    Library library;
+    Saiyan saiyan;
 
     @GET
-    @Path("/{name}")
-    public Response get(@PathParam("name") String name) {
-        return Response.ok().entity(library.sayHello(name)).build();
+    public Response get() {
+        return Response.ok().entity(saiyan.kamehameha()).build();
     }
 }

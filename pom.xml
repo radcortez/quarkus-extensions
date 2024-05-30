@@ -23,9 +23,9 @@
   </properties>
   <modules>
     <module>library</module>
-    <module>application</module>
     <module>deployment</module>
     <module>runtime</module>
+    <module>application</module>
   </modules>
   <build>
     <pluginManagement>

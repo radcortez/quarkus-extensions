@@ -7,22 +7,21 @@ import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.RegisterExtension;
 
-import com.radcortez.quarkus.extensions.library.Library;
+import com.radcortez.quarkus.extensions.library.Saiyan;
 
 import io.quarkus.test.QuarkusUnitTest;
 
-class LibraryTest {
+class SaiyanTest {
     @RegisterExtension
     static QuarkusUnitTest TEST = new QuarkusUnitTest()
             .withConfigurationResource("application.properties")
             .setArchiveProducer(() -> ShrinkWrap.create(JavaArchive.class));
 
     @Inject
-    Library library;
+    Saiyan saiyan;
 
     @Test
     void library() {
-        System.out.println(library.sayHello("Naruto"));
+        System.out.println(saiyan.kamehameha());
     }
-
 }

@@ -1,6 +1,6 @@
 package com.radcortez.quarkus.extensions.deployment;
 
-import com.radcortez.quarkus.extensions.library.LibraryBuilder;
+import com.radcortez.quarkus.extensions.library.SaiyanTransform;
 import com.radcortez.quarkus.extensions.runtime.ConfigMappingBuildAndRunTimeFixed;
 import com.radcortez.quarkus.extensions.runtime.LibraryProducer;
 import com.radcortez.quarkus.extensions.runtime.LibraryRecorder;
@@ -16,7 +16,7 @@ import io.quarkus.deployment.builditem.ServiceStartBuildItem;
 public class LibraryProcessor {
     @BuildStep
     void library(BuildProducer<LibraryBuildItem> library, BuildProducer<AdditionalBeanBuildItem> additionalBeans) {
-        library.produce(new LibraryBuildItem(new LibraryBuilder().build()));
+        library.produce(new LibraryBuildItem(new SaiyanTransform().superSaiyan()));
         additionalBeans.produce(new AdditionalBeanBuildItem(LibraryProducer.class));
     }
 

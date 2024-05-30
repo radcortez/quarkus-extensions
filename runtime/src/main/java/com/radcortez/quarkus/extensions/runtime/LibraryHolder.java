@@ -1,15 +1,15 @@
 package com.radcortez.quarkus.extensions.runtime;
 
-import com.radcortez.quarkus.extensions.library.Library;
+import com.radcortez.quarkus.extensions.library.Saiyan;
 
 public class LibraryHolder {
-    private static volatile Library library;
+    private static volatile Saiyan saiyan;
 
-    static void registerLibrary(Library library) {
-        LibraryHolder.library = library;
+    static void registerLibrary(Saiyan saiyan) {
+        LibraryHolder.saiyan = saiyan;
     }
 
-    static Library getLibrary() {
-        return library;
+    static Saiyan getLibrary() {
+        return saiyan;
     }
 }

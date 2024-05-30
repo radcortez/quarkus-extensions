@@ -1,11 +1,11 @@
 package com.radcortez.quarkus.extensions.application;
 
-import com.radcortez.quarkus.extensions.library.Library;
-import com.radcortez.quarkus.extensions.library.LibraryBuilder;
+import com.radcortez.quarkus.extensions.library.Saiyan;
+import com.radcortez.quarkus.extensions.library.SaiyanTransform;
 
 public class Main {
     public static void main(String[] args) {
-        Library library = new LibraryBuilder().build();
-        System.out.println(library.sayHello("Naruto"));
+        Saiyan saiyan = new SaiyanTransform().superSaiyan();
+        System.out.println(saiyan.kamehameha());
     }
 }
